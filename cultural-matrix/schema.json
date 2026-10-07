@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CulturalMatrixConfig",
+  "type": "object",
+  "required": ["language_code", "language_name", "tone_axis"],
+  "properties": {
+    "language_code": {
+      "type": "string"
+    },
+    "language_name": {
+      "type": "string"
+    },
+    "tone_axis": {
+      "type": "object",
+      "required": ["formal", "business", "casual"],
+      "properties": {
+        "formal": {
+          "type": "object",
+          "required": ["system_prompt_addon", "rules"],
+          "properties": {
+            "system_prompt_addon": { "type": "string" },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "business": {
+          "type": "object",
+          "required": ["system_prompt_addon", "rules"],
+          "properties": {
+            "system_prompt_addon": { "type": "string" },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "casual": {
+          "type": "object",
+          "required": ["system_prompt_addon", "rules"],
+          "properties": {
+            "system_prompt_addon": { "type": "string" },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    }
+  }
+}

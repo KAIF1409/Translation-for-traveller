@@ -1,0 +1,18 @@
+{
+  "language_code": "ko",
+  "language_name": "Korean",
+  "tone_axis": {
+    "formal": {
+      "system_prompt_addon": "Use formal honorific Korean (Hasipsio-che).",
+      "rules": ["Use formal honorific verb endings like -mnida/-sumnida."]
+    },
+    "business": {
+      "system_prompt_addon": "Use polite informal Korean (Haeyo-che).",
+      "rules": ["Use polite workplace endings (-yo) appropriate for business interactions."]
+    },
+    "casual": {
+      "system_prompt_addon": "Use informal casual Korean (Panmal).",
+      "rules": ["Use casual endings suitable for close friends."]
+    }
+  }
+}

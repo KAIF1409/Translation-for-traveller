@@ -1,0 +1,18 @@
+{
+  "language_code": "ja",
+  "language_name": "Japanese",
+  "tone_axis": {
+    "formal": {
+      "system_prompt_addon": "Use Keigo (Sonkeigo/Kenjougo) where appropriate.",
+      "rules": ["Always end sentences with polite forms (desu/masu or higher)."]
+    },
+    "business": {
+      "system_prompt_addon": "Use polite workplace Japanese (Desu/Masu style).",
+      "rules": ["Maintain professional clarity and polite workplace register."]
+    },
+    "casual": {
+      "system_prompt_addon": "Use friendly conversational Japanese (Tameguchi).",
+      "rules": ["Use casual sentence enders while keeping intent clear."]
+    }
+  }
+}

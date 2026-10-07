@@ -1,0 +1,48 @@
+{
+  "voices": [
+    {
+      "language": "en",
+      "language_name": "English",
+      "provider": "piper",
+      "voice_id": "en_US-lessac-medium",
+      "voice_name": "Lessac Medium (US)",
+      "model_file": "en_US-lessac-medium.onnx",
+      "config_file": "en_US-lessac-medium.onnx.json",
+      "sample_rate": 22050,
+      "download_source": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx",
+      "config_download_source": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json",
+      "license": "CC-BY-SA 4.0",
+      "attribution": "Piper Speech Synthesizer - rhasspy/piper-voices"
+    },
+    {
+      "language": "hi",
+      "language_name": "Hindi",
+      "provider": "piper",
+      "voice_id": "hi_IN-medium",
+      "voice_name": "Hindi Medium",
+      "model_file": "hi_IN-medium.onnx",
+      "config_file": "hi_IN-medium.onnx.json",
+      "sample_rate": 22050,
+      "download_source": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/hi/hi_IN/male/medium/hi_IN-medium.onnx",
+      "config_download_source": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/hi/hi_IN/male/medium/hi_IN-medium.onnx.json",
+      "license": "CC-BY-SA 4.0",
+      "attribution": "Piper Speech Synthesizer - rhasspy/piper-voices"
+    },
+    {
+      "language": "ja",
+      "language_name": "Japanese",
+      "provider": "piper",
+      "voice_id": "ja_JP-medium",
+      "voice_name": "Japanese Medium",
+      "model_file": "ja_JP-medium.onnx",
+      "config_file": "ja_JP-medium.onnx.json",
+      "sample_rate": 22050,
+      "download_source": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/ja/ja_JP/takumi/medium/ja_JP-medium.onnx",
+      "config_download_source": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/ja/ja_JP/takumi/medium/ja_JP-medium.onnx.json",
+      "license": "CC-BY-SA 4.0",
+      "attribution": "Piper Speech Synthesizer - rhasspy/piper-voices"
+    }
+  ],
+  "supported_languages": ["en", "hi", "ja"],
+  "notes": "Vietnamese and Korean voices will be added after actual voice validation. Text translation remains available for unsupported languages."
+}

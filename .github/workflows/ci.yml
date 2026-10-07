@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: core-engine/requirements.txt
+
+      - name: Install backend dependencies
+        working-directory: core-engine
+        run: pip install -r requirements.txt
+
+      - name: Validate JSON configs
+        run: |
+          python - <<'EOF'
+          import json, glob, pathlib
+          paths = []
+          paths += glob.glob('cultural-matrix/*.json')
+          paths += ['core-engine/models/voice_manifest.json']
+          for p in paths:
+              json.loads(pathlib.Path(p).read_text(encoding='utf-8'))
+              print(f'OK  {p}')
+          EOF
+
+      # Unit/integration tests use deterministic fake providers:
+      # no API keys, no network, no model downloads required.
+      - name: Backend tests (fake providers)
+        working-directory: core-engine
+        env:
+          GEMINI_API_KEY: ""
+          GROQ_API_KEY: ""
+        run: |
+          python test_phase1.py
+          python -m pytest test_phase2.py test_phase5.py test_phase7.py -v
+
+      # Live provider and heavyweight-model tests (phases 3/4 scripts)
+      # are opt-in only and never run in CI.
+
+  client:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Flutter pub get
+        working-directory: client
+        run: flutter pub get
+
+      - name: Flutter analyze
+        working-directory: client
+        run: flutter analyze --fatal-infos
+
+      - name: Flutter test
+        working-directory: client
+        run: flutter test
+
+# Secrets are intentionally NOT required: all provider tests use fakes.
+# Live-provider tests stay local and opt-in (see docs/API_KEYS.md).

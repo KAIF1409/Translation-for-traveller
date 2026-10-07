@@ -1,0 +1,18 @@
+{
+  "language_code": "en",
+  "language_name": "English",
+  "tone_axis": {
+    "formal": {
+      "system_prompt_addon": "Use precise vocabulary, complex sentence structures, and passive voice where appropriate. Avoid contractions.",
+      "rules": ["Do not use contractions like can't or won't.", "Use formal vocabulary and passive phrasing where appropriate."]
+    },
+    "business": {
+      "system_prompt_addon": "Use standard professional workplace English. Keep it clear, polite, and active.",
+      "rules": ["Maintain standard professional spelling and grammar.", "Ensure clear, active, and polite tone suitable for business communication."]
+    },
+    "casual": {
+      "system_prompt_addon": "Use friendly, informal, conversational English with standard contractions.",
+      "rules": ["Use natural contractions like can't, it's, etc.", "Use casual vocabulary and conversational phrasing."]
+    }
+  }
+}

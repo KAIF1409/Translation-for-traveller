@@ -1,0 +1,18 @@
+{
+  "language_code": "vi",
+  "language_name": "Vietnamese",
+  "tone_axis": {
+    "formal": {
+      "system_prompt_addon": "Use formal Vietnamese register with polite honorific pronouns.",
+      "rules": ["Use formal pronouns (Kính gửi / Thưa) and polite sentence markers ('dạ', 'ạ')."]
+    },
+    "business": {
+      "system_prompt_addon": "Use standard business Vietnamese.",
+      "rules": ["Use professional workplace pronouns (Tôi / Anh / Chị) and polite markers ('dạ', 'ạ')."]
+    },
+    "casual": {
+      "system_prompt_addon": "Use natural conversational Vietnamese.",
+      "rules": ["Use natural everyday pronouns appropriate for peer conversation."]
+    }
+  }
+}

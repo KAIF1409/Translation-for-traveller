@@ -1,0 +1,28 @@
+name: polyglot_voice_client
+description: "Polyglot Voice Flutter Client application"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # WebSocket client for backend communication
+  web_socket_channel: ^3.0.0
+  # Microphone permission handling (Android/iOS)
+  permission_handler: ^12.0.0
+  # PCM16 16kHz streaming capture (record package supports raw PCM streams)
+  record: ^5.2.0
+  # WAV playback from in-memory bytes
+  audioplayers: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+

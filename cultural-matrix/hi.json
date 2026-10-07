@@ -1,0 +1,18 @@
+{
+  "language_code": "hi",
+  "language_name": "Hindi",
+  "tone_axis": {
+    "formal": {
+      "system_prompt_addon": "Use formal high Hindi with respectful pronouns (Aap).",
+      "rules": ["Always address the listener as 'Aap' with formal verb conjugations."]
+    },
+    "business": {
+      "system_prompt_addon": "Use standard business Hindi.",
+      "rules": ["Use respectful address 'Aap' and clear professional vocabulary."]
+    },
+    "casual": {
+      "system_prompt_addon": "Use natural conversational Hinglish/Hindi.",
+      "rules": ["Use casual pronouns ('Tum') and friendly everyday phrasing."]
+    }
+  }
+}

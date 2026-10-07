@@ -1,0 +1,54 @@
+# Environment files
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Models and audio downloads
+/models/
+*.wav
+*.mp3
+*.ogg
+# Downloaded voice/STT model binaries (keep the manifest, ignore the rest)
+core-engine/models/*
+!core-engine/models/voice_manifest.json
+# Scratch/output files (but never package files like __init__.py)
+_*
+!__init__.py
+
+# Flutter / Dart
+client/.dart_tool/
+client/.flutter-plugins
+client/.flutter-plugins-dependencies
+client/.packages
+client/build/
+client/.pub-cache/
+client/.pub/
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
